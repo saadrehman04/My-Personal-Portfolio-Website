@@ -156,13 +156,27 @@ function ProjectCard({
         </div>
 
         {/* CTA */}
-        <Link
-          href={`/work/${project.slug}`}
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-500 hover:text-blue-400 transition-colors group/link"
-        >
-          View Case Study
-          <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-        </Link>
+        <div className="flex items-center justify-between mt-auto">
+          <Link
+            href={`/work/${project.slug}`}
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-500 hover:text-blue-400 transition-colors group/link"
+          >
+            View Case Study
+            <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+          </Link>
+          
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors group/extLink"
+            >
+              Visit
+              <ExternalLink className="w-4 h-4 group-hover/extLink:-translate-y-0.5 group-hover/extLink:translate-x-0.5 transition-transform" />
+            </a>
+          )}
+        </div>
       </div>
     </motion.div>
   );

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 import {
   Linkedin,
   Github,
@@ -39,12 +40,16 @@ export function About() {
               {/* Ring border */}
               <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-0.5">
                 <div className="w-full h-full rounded-full bg-muted overflow-hidden flex items-center justify-center">
-                  {/* Placeholder avatar — replace with next/image when headshot is available */}
-                  <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center">
-                    <span className="font-display text-6xl font-bold gradient-text">
-                      SR
-                    </span>
-                  </div>
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <Image
+                    src="/images/saad-hero.png"
+                    alt="Saad Rehman"
+                    width={256}
+                    height={256}
+                    className="w-full h-full object-cover object-top"
+                    priority
+                  />
+                </div>
                 </div>
               </div>
               {/* Badge */}

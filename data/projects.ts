@@ -12,9 +12,113 @@ export interface Project {
   featured: boolean;
   gradient: string;
   image: string;
+  link?: string;
 }
 
 export const projects: Project[] = [
+  // ── Live projects (with Visit button) ──────────────────────────────────────
+  {
+    slug: "prestige-estates",
+    title: "Prestige Estates",
+    image: "/projects/real-estate.png",
+    category: "full-stack",
+    categoryLabel: "Full Stack",
+    result: "Luxury Real Estate Platform",
+    description:
+      "A ultra-premium luxury real estate platform showcasing multi-million dollar properties across Beverly Hills, Malibu, Manhattan and more.",
+    problem:
+      "A high-end real estate agency needed an online presence that matched the prestige of their $38M+ property portfolio and attracted UHNW clientele.",
+    solution:
+      "Built a cinematic, dark-themed Next.js website with property listings, agent profiles, booking system, and a stunning gallery — designed to exude exclusivity.",
+    outcome:
+      "Delivered a world-class digital presence that elevated the brand, featuring 104 properties with an average price of $11.2M.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    featured: true,
+    gradient: "from-amber-500/20 to-yellow-500/20",
+    link: "https://real-estate-website-topaz-mu.vercel.app/",
+  },
+  {
+    slug: "vinzlu",
+    title: "Vinzlu — Premium Pantry",
+    image: "/projects/vinzlu.png",
+    category: "full-stack",
+    categoryLabel: "Full Stack",
+    result: "Premium E-commerce Store",
+    description:
+      "A premium online pantry e-commerce platform selling globally sourced spices, grains, oils and artisan pantry staples delivered to your door.",
+    problem:
+      "An artisan food brand needed an elegant e-commerce presence that reflected the premium quality of their products sourced from 40+ countries.",
+    solution:
+      "Designed and built a clean, conversion-optimised storefront with product collections, category browsing, checkout flow, and brand storytelling.",
+    outcome:
+      "Launched a high-converting e-commerce store with full product catalogue, category pages, and newsletter integration.",
+    techStack: ["Next.js", "Tailwind CSS", "E-commerce", "React"],
+    featured: true,
+    gradient: "from-amber-500/20 to-orange-500/20",
+    link: "https://vinzlu.com",
+  },
+  {
+    slug: "querymind-ai-analyst",
+    title: "QueryMind — AI Data Analyst",
+    image: "/projects/ai-analyst.png",
+    category: "ai-agents",
+    categoryLabel: "AI Agents",
+    result: "Natural Language Database Queries",
+    description:
+      "An AI-powered SaaS application that lets users query their databases in plain English and instantly receive charts, tables, and plain language insights.",
+    problem:
+      "Non-technical stakeholders couldn't access their own data without waiting on engineers to write SQL queries, creating bottlenecks in data-driven decision making.",
+    solution:
+      "Built a dark-themed SaaS dashboard where users type plain English questions and receive instant AI-generated visualisations, data tables, and summaries powered by LLMs.",
+    outcome:
+      "Empowered non-technical users to independently extract business insights, eliminating engineering bottlenecks entirely.",
+    techStack: ["OpenAI", "Next.js", "Python", "Data Visualization", "TypeScript"],
+    featured: true,
+    gradient: "from-blue-500/20 to-cyan-500/20",
+    link: "https://ai-data-analyst-lilac.vercel.app/",
+  },
+  {
+    slug: "fixora-instant-repair",
+    title: "Fixora — Instant Repair",
+    image: "/projects/instant-repair.png",
+    category: "full-stack",
+    categoryLabel: "Full Stack",
+    result: "5,000+ Clients Served",
+    description:
+      "A cinematic service booking website for a professional device and electrical repair company — same-day bookings, expert technician profiles, and 90-day warranty.",
+    problem:
+      "A repair service company needed a bold, premium digital presence to stand out in a crowded market and drive online bookings.",
+    solution:
+      "Built a visually stunning dark-themed website with a full-screen hero, technician cards, testimonials, and a streamlined contact/booking flow.",
+    outcome:
+      "Delivered a high-impact website with 98% satisfaction showcased front-and-center, increasing inbound booking rates.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    featured: true,
+    gradient: "from-red-500/20 to-orange-500/20",
+    link: "https://instant-repair.vercel.app/",
+  },
+  {
+    slug: "rahma-medical-center",
+    title: "Rahma Medical Center",
+    image: "/projects/medical-clinic.png",
+    category: "full-stack",
+    categoryLabel: "Full Stack",
+    result: "2,400+ Patients Onboarded",
+    description:
+      "A professional medical clinic website for Dr. Ahmed Al-Rashid — a board-certified internist with 15+ years of experience in Houston.",
+    problem:
+      "The clinic needed a modern digital presence that conveyed trust, professionalism, and made it easy for patients to book appointments and access information.",
+    solution:
+      "Designed a premium dark-themed healthcare website with doctor profile, services listing, appointment booking, patient testimonials, and HIPAA-compliant contact forms.",
+    outcome:
+      "Delivered a conversion-focused clinic website that projects authority and warmth — leading to measurable growth in new patient inquiries.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    featured: true,
+    gradient: "from-blue-500/20 to-teal-500/20",
+    link: "https://medical-clinic-website-rosy.vercel.app/",
+  },
+
+  // ── Case Studies ────────────────────────────────────────────────────────────
   {
     slug: "ai-lead-qualification-agent",
     title: "AI Lead Qualification Agent",
@@ -91,43 +195,42 @@ export const projects: Project[] = [
     featured: false,
     gradient: "from-orange-500/20 to-red-500/20",
   },
-    {
-  slug: "blog-writing-ai-agent",
-  title: "AI Blog Writing Agent",
-  image: "/projects/blog.png",
-  category: "ai-agents",
-  categoryLabel: "AI Agents",
-  result: "Increased content output by 6x for marketing teams",
-  description:
-    "An AI-powered writing assistant that generates SEO-optimized blog posts, outlines, and content ideas tailored to brand tone and audience.",
-  problem:
-    "A marketing team struggled to consistently produce high-quality blog content at scale, leading to missed publishing deadlines and weak SEO performance.",
-  solution:
-    "Built an LLM-powered blog writing agent using OpenAI with a structured prompt pipeline for ideation, outlining, drafting, and SEO optimization. Integrated with a CMS for direct publishing workflows.",
-  outcome:
-    "Increased content production by 6x, reduced writing time per article from 6 hours to 45 minutes, and improved organic traffic by 40% in 3 months.",
-  techStack: ["OpenAI", "LangChain", "Next.js", "Node.js", "Notion API", "Python"],
-  featured: true,
-  gradient: "from-blue-500/20 to-indigo-500/20",
-},
-
-{
-  slug: "ai-voice-agent",
-  title: "AI Voice Support Agent",
-  image: "/projects/voice.png",
-  category: "ai-agents",
-  categoryLabel: "AI Agents",
-  result: "Handled 70% of inbound calls without human agents",
-  description:
-    "A real-time conversational AI voice agent capable of understanding, responding, and resolving customer queries over phone calls.",
-  problem:
-    "A customer service center faced high call volumes, long wait times, and expensive staffing requirements for 24/7 support coverage.",
-  solution:
-    "Developed a real-time AI voice agent using speech-to-text, LLM reasoning, and text-to-speech pipelines. Integrated with Twilio for telephony and backend CRM systems for context-aware responses.",
-  outcome:
-    "Automated 70% of inbound support calls, reduced average wait time from 8 minutes to under 30 seconds, and cut operational costs by 55%.",
-  techStack: ["OpenAI", "Whisper", "Twilio", "ElevenLabs", "Node.js", "FastAPI"],
-  featured: true,
-  gradient: "from-green-500/20 to-emerald-500/20",
-}
+  {
+    slug: "blog-writing-ai-agent",
+    title: "AI Blog Writing Agent",
+    image: "/projects/blog.png",
+    category: "ai-agents",
+    categoryLabel: "AI Agents",
+    result: "Increased content output by 6x for marketing teams",
+    description:
+      "An AI-powered writing assistant that generates SEO-optimized blog posts, outlines, and content ideas tailored to brand tone and audience.",
+    problem:
+      "A marketing team struggled to consistently produce high-quality blog content at scale, leading to missed publishing deadlines and weak SEO performance.",
+    solution:
+      "Built an LLM-powered blog writing agent using OpenAI with a structured prompt pipeline for ideation, outlining, drafting, and SEO optimization. Integrated with a CMS for direct publishing workflows.",
+    outcome:
+      "Increased content production by 6x, reduced writing time per article from 6 hours to 45 minutes, and improved organic traffic by 40% in 3 months.",
+    techStack: ["OpenAI", "LangChain", "Next.js", "Node.js", "Notion API", "Python"],
+    featured: true,
+    gradient: "from-blue-500/20 to-indigo-500/20",
+  },
+  {
+    slug: "ai-voice-agent",
+    title: "AI Voice Support Agent",
+    image: "/projects/voice.png",
+    category: "ai-agents",
+    categoryLabel: "AI Agents",
+    result: "Handled 70% of inbound calls without human agents",
+    description:
+      "A real-time conversational AI voice agent capable of understanding, responding, and resolving customer queries over phone calls.",
+    problem:
+      "A customer service center faced high call volumes, long wait times, and expensive staffing requirements for 24/7 support coverage.",
+    solution:
+      "Developed a real-time AI voice agent using speech-to-text, LLM reasoning, and text-to-speech pipelines. Integrated with Twilio for telephony and backend CRM systems for context-aware responses.",
+    outcome:
+      "Automated 70% of inbound support calls, reduced average wait time from 8 minutes to under 30 seconds, and cut operational costs by 55%.",
+    techStack: ["OpenAI", "Whisper", "Twilio", "ElevenLabs", "Node.js", "FastAPI"],
+    featured: true,
+    gradient: "from-green-500/20 to-emerald-500/20",
+  },
 ];
